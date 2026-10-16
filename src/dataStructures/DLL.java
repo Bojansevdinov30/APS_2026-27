@@ -34,10 +34,10 @@ public class DLL<E extends Comparable<E>> implements Comparable<DLL<E>> {
         // O(n) complexity
         if (first != null) {
             DLLNode<E> temp = first;
-            while (temp.element != o && temp.succ != null) {
+            while (!(temp.element.equals(o)) && temp.succ != null) {
                 temp = temp.succ;
             }
-            if (temp.element == o) {
+            if (temp.element.equals(o)) {
                 return temp;
             } else {
                 System.out.println("Element not found");
