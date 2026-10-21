@@ -34,7 +34,7 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     public void push(E x) {
-        // O(n) complexity
+        // O(1) complexity
         // Го додава x на врвот на стекот.
         elems[depth++] = x;
     }
