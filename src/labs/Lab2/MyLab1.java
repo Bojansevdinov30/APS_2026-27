@@ -226,7 +226,7 @@ public class MyLab1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine(); // kako sto bese cin.ignore() vo c++
         SLL<String> list1 = new SLL<String>();
         for (int i = 0; i < n; i++) {
             list1.insertLast(sc.nextLine());
