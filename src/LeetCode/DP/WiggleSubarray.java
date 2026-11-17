@@ -17,14 +17,15 @@ public class WiggleSubarray {
 
         for (int i = 1; i < n; i++) {
 
-            up[i] = up[i - 1];
-            down[i] = down[i - 1];
-
             if (nums[i] > nums[i - 1]) {
                 up[i] = down[i - 1] + 1;
-            }
-            else if (nums[i] < nums[i - 1]) {
+                down[i] = 1;
+            } else if (nums[i] < nums[i - 1]) {
                 down[i] = up[i - 1] + 1;
+                up[i] = 1;
+            } else {
+                up[i] = 1;
+                down[i] = 1;
             }
 
             max = Math.max(max, Math.max(up[i], down[i]));
